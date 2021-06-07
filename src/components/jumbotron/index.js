@@ -21,22 +21,22 @@ export default function Jumbotron({
   );
 }
 
-Jumbotron.Container = function JumboTronContainer({ children, ...restProps }) {
+Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 };
 
-Jumbotron.Pane = function JumboTronPane({ children, ...restProps }) {
+Jumbotron.Pane = function JumbotronPane({ children, ...restProps }) {
   return <Pane {...restProps}>{children}</Pane>;
 };
 
-Jumbotron.Title = function JumboTronTitle({ children, ...restProps }) {
+Jumbotron.Title = function JumbotronTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Jumbotron.SubTitle = function JumboTronSubTitle({ children, ...restProps }) {
+Jumbotron.SubTitle = function JumbotronSubTitle({ children, ...restProps }) {
   return <SubTitle {...restProps}>{children}</SubTitle>;
 };
 
-Jumbotron.Image = function JumboTronImage({ ...restProps }) {
+Jumbotron.Image = function JumbotronImage({ ...restProps }) {
   return <Image {...restProps} />;
 };
