@@ -4,7 +4,7 @@ import { Link as ReachRouterLink } from "react-router-dom";
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(${({src}) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')})
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${({src}) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')})
   top left / cover no-repeat;
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) =>
@@ -29,11 +29,18 @@ export const Container = styled.div`
 export const Link = styled.p`
   color: #fff;
   text-decoration: none;
+  font-size: 20px;
   margin-right: 30px;
-  font-weight: ${({ active }) => (active === "true" ? "700" : "normal")};
+  padding: 10px;
+  font-weight: ${({ active }) => (active === "true" ? "1000" : "normal")};
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 6px;
   &:hover {
-    font-weight: bold;
+    font-weight: none;
+    color: white;
+    border: 1px solid white;
+    background: black;
   }
   &:last-of-type {
     margin-right: 0;
@@ -50,13 +57,13 @@ export const SearchInput = styled.input`
   color: white;
   border: 1px solid white;
   transition: width 0.5s;
-  height: 30px;
-  font-size: 14px;
+  height: 38px;
+  font-size: 18px;
   border-radius: 4px;
   margin-left: ${({ active }) => (active === true ? "10px" : "0")};
   padding: ${({ active }) => (active === true ? "0 10px" : "0")};
   opacity: ${({ active }) => (active === true ? "1" : "0")};
-  width: ${({ active }) => (active === true ? "200px" : "0px")};
+  width: ${({ active }) => (active === true ? "300px" : "0px")};
   &:focus {
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -87,7 +94,7 @@ export const SearchIcon = styled.button`
   justify-content: center;
   img {
     filter: brightness(0) invert(1);
-    width: 16px;
+    width: 22px;
   }
 `;
 
@@ -112,9 +119,8 @@ export const Picture = styled.button`
   background: url(${({ src }) => src});
   background-size: contain;
   border: 0;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+  width: 40px;
+  height: 40px;
 `;
 
 export const Dropdown = styled.div`
@@ -123,8 +129,10 @@ export const Dropdown = styled.div`
   background-color: black;
   padding: 10px;
   width: 100px;
-  top: 32px;
+  top: 41px;
   right: 10px;
+  border: 1px solid white;
+  border-radius: 6px;
   ${Group}:last-of-type ${Link} {
     cursor: pointer;
   }
@@ -168,7 +176,7 @@ export const Feature = styled(Container)`
   padding: 150px 0 500px 0;
   flex-direction: column;
   align-items: normal;
-  width: 50%;
+  width: 40%;
   @media (max-width: 1100px) {
     display: none;
   }
